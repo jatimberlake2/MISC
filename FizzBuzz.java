@@ -2,21 +2,19 @@ public class FizzBuzz
 {
 	public static void main(String[] args) 
 		{
-		
-			String str = "";
 			for (int i=1; i<101; i++)
-			{
-				str = i + " ";
-				
+			{				
+				String str = i + "";
 				if (i%3 == 0)
-					str += "Fizz";
-				
+					str = "Fizz";
 				if (i%5==0)
-					str+="Buzz";
-				
+				{
+					if (str.equals("Fizz"))
+						str += "Buzz";
+					else
+						str = "Buzz";
+				}
 				System.out.println(str);
 			}
-			
 		}
-
 }
